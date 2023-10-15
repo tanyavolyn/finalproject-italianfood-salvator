@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+
+
+.App{
+    display: flex;
+ flex-direction: column;
+
+
+}
+h1{
+    font-family: 'Roboto Serif', serif;
+
+    font-size: 48pt;
+    color: #CD212A;
+    text-shadow:  1px  1px 1px white,
+    1px -1px 1px white,
+   -1px  1px 1px white,
+   -1px -1px 1px white;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+ align-items: center;
+ padding: 20px;
+}
+.nav-text{
+    font-family: 'Roboto', sans-serif;
+    color: white; 
+    font-size: 16pt;
+    font-weight: 400;
+    text-decoration: none;
+
+}
+.nav-cart{
+    background-color: white;
+margin: 5px;
+padding-right: 5px;
+border-radius: 50%;
+   
+}
+.container-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001f0f;
+    height: 120px;
+    padding-left: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-home{
+display:flex;
+flex-direction: column;
+}
+.all-categories{
+    display: flex;
+    justify-content: space-between;
+    background-color: #CD212A;
+    color: white;
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+    font-size: 16pt;
+    padding-right: 220px;
+    padding-left: 220px;
+    border-top: white double;
+    border-bottom: white double;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dish, .category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dish{
+    width: 100%;
+    background-image: url('/public/hintergrund.jpg');
+    background-size: cover;
+}
+.cart-site{
+
+    background-image: url('/public/hintergrund.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.cart-block{
+    background-color: white;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+   
+}
+.cart-item{
+    display: flex;
+    align-items: center;
+}
+.dish-unter{
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.856);
+  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dish-img{
+    width: 800px;
+    border: black solid 10px;
+}
+.dish-price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+}
+.dish-text{
+    font-weight: bolder;
+}
+.dish-quantity{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.categoryButtonSelected{
+    background-color: rgba(124, 124, 124, 0.815);
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid white 1px;
+}
+.categoryButton:hover{
+    background-color: #008C45;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid white 1px;
+}
+.delete{
+    width: 18px;
+}
+.delete:hover{
+cursor: pointer;
+}
+.cart-item-portionen, .cart-item-name, .cart-item-name, .cart-item-bild, .cart-item-button, .cart-item-price{
+    width: 100%;
+}
+.cart-item-button, .cart-item-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+hr{
+    width: 100%;
+}
+@media all and (max-width: 800px){
+    
+.all-categories{
+    display: flex;
+       flex-direction: column;
+       padding: 0;
+           }
+    
+}
+h1{
+    font-size: 32pt;
+}
+.nav-text{
+  font-size: 12pt;  
+}
+.dish-img{
+    width: 600px;
+}
+.cart-block, .dish-unter{
+    width: 700px;
+}
+.dish-price{
+    width: 600px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media all and (max-width: 500px){
+    
+    .all-categories{
+        display: flex;
+           flex-direction: column;
+           padding: 0;
+               }
+        
+    
+    h1{
+        font-size: 24pt;
+    }
+    .nav-text{
+      font-size: 10pt;  
+    }
+    .dish-img{
+        width: 300px;
+    }
+    .cart-block, .dish-unter{
+        width: 400px;
+    }
+    .dish-price{
+        width: 300px;
+    }
 }
