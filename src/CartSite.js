@@ -13,7 +13,7 @@ function App() {
     <div className="cart-site">
 
       <div className='cart-block'>
-{cartItems.map(cartItem => <CartItem cartItem={cartItem}/> 
+{cartItems.map(cartItem => <CartItem key={cartItem.id} cartItem={cartItem}/> 
 )}
     
 <hr></hr>

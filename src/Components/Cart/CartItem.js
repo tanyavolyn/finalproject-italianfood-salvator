@@ -9,7 +9,7 @@ const CartItem = ({cartItem}) => {
 
     const dishes = dataDishes.find(item => item.id === cartItem.dishId);
     const dispatch = useDispatch();
-console.log(cartItem)
+
 
     return(
    
